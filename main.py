@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 import json
+from google.colab import userdata
 from datetime import datetime
 from typing import Optional
 
@@ -19,8 +20,8 @@ from diffusers import StableDiffusionXLPipeline
 from PIL import Image, ImageDraw, ImageFont
 
 load_dotenv()
-os.environ['LANGCHAIN_API_KEY'] = os.getenv('LANGCHAIN_API_KEY')
-groq_api_key = os.getenv("GROQ_API_KEY")
+os.environ['LANGCHAIN_API_KEY'] = userdata.get('LANGCHAIN_API_KEY')
+groq_api_key = userdata.get("GROQ_API_KEY")
 os.environ['HF_HOME'] = "/content/huggingface_cache"     # Set the Hugging Face cache directory to my F: drive
 
 CACHE_DIR = "/content/huggingface_cache"

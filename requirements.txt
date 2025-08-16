@@ -14,3 +14,4 @@ safetensors
 torch
 hf_transfer
 python-multipart
+google
