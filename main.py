@@ -21,20 +21,20 @@ from PIL import Image, ImageDraw, ImageFont
 load_dotenv()
 os.environ['LANGCHAIN_API_KEY'] = os.getenv('LANGCHAIN_API_KEY')
 groq_api_key = os.getenv("GROQ_API_KEY")
-os.environ['HF_HOME'] = "F:\\huggingface_cache"     # Set the Hugging Face cache directory to my F: drive
+os.environ['HF_HOME'] = "/content/huggingface_cache"     # Set the Hugging Face cache directory to my F: drive
 
-CACHE_DIR = "F:\\huggingface_cache"
+CACHE_DIR = "/content/huggingface_cache"
 os.makedirs(CACHE_DIR, exist_ok=True)
 
-DEVICE = "cpu"
-OUTPUT_DIR = "outputs"
+DEVICE = "cuda"
+OUTPUT_DIR = "/content/outputs"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 llm = ChatGroq(model="llama3-70b-instruct", temperature=0.2)
 
 model_id = "segmind/Segmind-Vega"
 pipe = StableDiffusionXLPipeline.from_pretrained(
-    model_id, torch_dtype=torch.float32, cache_dir=CACHE_DIR, local_files_only=True
+    model_id, torch_dtype=torch.float16, cache_dir=CACHE_DIR,
 )
 pipe = pipe.to(DEVICE)
 
