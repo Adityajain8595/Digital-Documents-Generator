@@ -1,0 +1,86 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env/
+.venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Python-specific
+*.egg
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# Logs and local data
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+*.pkl
+
+# dotenv files
+.env
+.env.*
+
+# Test and coverage outputs
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# mypy, pylint, pyright
+.mypy_cache/
+.dmypy.json
+.pytype/
+.pyright/
+
+# VS Code local history
+.history/
+
+# MacOS and Linux system files
+.DS_Store
+.Trashes
+._*
+.Spotlight-V100
+.fseventsd
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Streamlit config
+.streamlit/
+
+# PyInstaller
+*.spec
+
+# Pytest cache
+.pytest_cache/

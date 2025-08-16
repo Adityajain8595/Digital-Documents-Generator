@@ -1,0 +1,16 @@
+fastapi 
+uvicorn 
+langchain
+langchain_groq 
+python-dotenv
+pydantic 
+pillow 
+jinja2
+langchain-community
+diffusers 
+transformers 
+accelerate 
+safetensors 
+torch
+hf_transfer
+python-multipart
